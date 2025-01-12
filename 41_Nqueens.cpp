@@ -8,7 +8,7 @@ bool isSafe(vector<vector<char>> board, int row, int col);
 void print(vector<vector<char>> board);
 int main()
 {
-    int n = 64;
+    int n = 8;
     vector<vector<char>> board;
     for (int i = 0; i < n; i++)
     {
