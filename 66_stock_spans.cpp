@@ -6,7 +6,7 @@
 using namespace std;
 vector<int> stockSpans(vector<int> &stocks)
 {
-	stack<int> idx;
+	stack<int> idx; // this stack points at the previous high.
 	vector<int> spans(stocks.size(), 0);
 	spans[0] = 1;
 	idx.push(0);

@@ -3,8 +3,9 @@
 #include <stack>
 #include <algorithm>
 using namespace std;
+
 template <class T>
-void pushAtBottom(stack<T>& s, T val)
+void pushAtBottomRec(stack<T>& s, T val)
 {
 	//recursive approach
 	if (s.empty())
@@ -14,8 +15,19 @@ void pushAtBottom(stack<T>& s, T val)
 	}
 	T temp = s.top();
 	s.pop();
-	pushAtBottom(s, val);
+	pushAtBottomRec(s, val);
 	s.push(temp);
+}
+
+template <class T>
+void reverse(stack<T>& s)
+{
+	if (s.empty())
+		return;
+	T temp = s.top();
+	s.pop();
+	reverse(s);
+	pushAtBottomRec(s, temp);
 }
 int main()
 {
@@ -25,6 +37,7 @@ int main()
 	s.push(3);
 	s.push(2);
 	s.push(1);
+	reverse(s);
 	while (!s.empty())
 	{
 		cout << s.top() << endl;
