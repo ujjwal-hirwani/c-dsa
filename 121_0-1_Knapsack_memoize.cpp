@@ -23,7 +23,8 @@ int main()
 {
     vector<int> wt = {2, 1, 5, 3};
     vector<int> val = {300, 200, 400, 500};
-    int w = 10, n = wt.size();
+    int w = 10;
+    int n = wt.size();
     vector<vector<int>> t(w + 1, vector<int> (n + 1, -1));
     cout << KnapSack(wt, val, w, wt.size(), t);
     return 0;

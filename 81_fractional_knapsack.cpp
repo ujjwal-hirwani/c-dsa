@@ -36,9 +36,9 @@ int fractionalKnapsack(vector<int> val, vector<int> wt, int W)
 }
 int main()
 {
-    vector <int> value = {60, 100, 120};
-    vector<int> weight = {10, 20, 30};
-    int W = 50;
+    vector <int> value = {10, 15, 10, 12, 8};
+    vector<int> weight = {3, 3, 2, 5, 1};
+    int W = 5;
     cout << fractionalKnapsack(value, weight, W) << endl;
     return 0;
 }
